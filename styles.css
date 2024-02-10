@@ -1,3 +1,140 @@
+/* ANIMARTION */
+@keyframes loading-animation {
+    0% {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+    50% {
+        opacity: 0.3;
+    }
+    75% {
+        opacity: 0.6;
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+/* BASE STYLES */
 body {
     font-family: 'Lato', sans-serif;
+    color: #fff;
+    background-image: url('static/background.avif');
+    background-position-y: -1000px;
+    background-position-x: -300px;
+    background-color: rgba(0,0,0,0.5);
+    background-blend-mode: darken;
+}
+
+/* HEADER */
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 1150px;
+    margin: auto;
+    animation: loading-animation 0.5s;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.links {
+    list-style: none;
+    display: flex;
+}
+
+.link-item {
+    margin-right: 25px;
+}
+
+.link {
+ text-decoration: none;
+ color: rgba(255, 255, 255, 0.75);
+ font-weight: 500;
+ font-size: 14px;
+ transition: all 0.4s;
+}
+
+.link:hover {
+    color: rgba(255, 255, 255, 1);
+}
+
+
+/* MAIN */
+
+.main {
+    text-align: center;
+    margin-top: 150px;
+    animation:  loading-animation 0.5s 0.1s backwards;
+}
+.heading {
+    font-size: 64px;
+    font-weight: bolder;
+    margin-bottom: 25px;
+}
+.text {
+    font-size: 18px;
+    max-width: 630px;
+    margin-left: auto;
+    margin-right: auto;
+    opacity: 0.8;
+    line-height: 1.4;
+}
+.text-header {
+    font-weight: 700;
+}
+
+.form {
+    font: inherit;
+    margin-top: 60px;
+}
+.input-text {
+    width: 520px;
+    height: 64px;
+    padding: 0px;
+    border: none;
+    border-radius: 3px;
+    opacity: 0.8;
+    padding-left: 30px;
+    font-size: 17px;
+    outline: none; /* Find replacement */
+    transition: all 0.5s;
+}
+
+.input-text:focus {
+    opacity: 1;
+}
+
+/* this is how we select attributes property*/
+.input-text::placeholder {
+    color: #000;
+}
+
+
+.input-button {
+    padding: 0;
+    border: none;
+    background-color: #000;
+    height: 64px;
+    width: 133px;
+    color: #fff;
+    font: inherit;
+    border-radius: 3px;
+    margin-left: 5px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 17px;
+    font-weight: 500;
+    transition: all 0.4s;
+    
+}
+
+.input-button:hover {
+    cursor: pointer;
+    background-color: #161616;
 }
